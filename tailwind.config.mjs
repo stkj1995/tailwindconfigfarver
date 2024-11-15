@@ -132,25 +132,25 @@ export default {
 
     extend: {
       /* Tilføj din egen farvepalette nedenfor */
-       colors: {
-           transparent: 'transparent',
-           current: 'currentColor',
-           'farvenavn': {
-               50: '#hexkode',
-               100: '#hexkode',
-               200: '#hexkode',
-               300: '#hexkode',
-               400: '#hexkode',
-               500: '#hexkode',
-               600: '#hexkode',
-               700: '#hexkode',
-               800: '#hexkode',
-               900: '#hexkode',
-           },
-           'white': '#fff',
-           'black': '#000',
-       },
-       
+    //    colors: {
+    //        transparent: 'transparent',
+    //        current: 'currentColor',
+    //        'farvenavn': {
+    //            50: '#hexkode',
+    //            100: '#hexkode',
+    //            200: '#hexkode',
+    //            300: '#hexkode',
+    //            400: '#hexkode',
+    //            500: '#hexkode',
+    //            600: '#hexkode',
+    //            700: '#hexkode',
+    //            800: '#hexkode',
+    //            900: '#hexkode',
+    //        },
+    //        'white': '#fff',
+    //        'black': '#000',
+    //    },
+
       /* Tilføj din egen spacing nedenfor */
       // spacing: {
       //     'm': '40px',
