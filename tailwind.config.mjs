@@ -82,7 +82,7 @@ export default {
 
         /* Tilføj fonte herunder - husk også at tilføje webfonte i head-sektionen i MainLayout  */
          fontFamily: {
-             sans: ['Prompt', 'sans-serif'],
+             sans: ['Poppins', 'sans-serif'],
              'display': ['Courier', 'monospace'], /* eksempel på ekstra font */
          },
 
