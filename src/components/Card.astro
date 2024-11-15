@@ -2,10 +2,11 @@
 export interface CardProps {
   headerImage: string;
   title: string;
-  subtitle: string;
+  subtitle: string[];
   description: string;
   instructorName: string;
   instructorImage: string;
+  instructorDescription: string;
 }
 
 const {
@@ -15,28 +16,36 @@ const {
   description,
   instructorName,
   instructorImage,
+  instructorDescription,
 } = Astro.props as CardProps;
 ---
 <div class="card flex flex-col border rounded-lg overflow-hidden shadow-md @container">
   <!-- Header med billede -->
-  <div class="header">
-    <img src={headerImage} alt="Header image" class="w-full h-40 object-cover" />
-  </div>
+  <section class="header">
+    <img src={headerImage} alt="Header image" class="w-full h-64 object-cover" />
+  </section>
 
   <!-- Holdinfo -->
-  <div class="info flex flex-col p-4">
-    <h2 class="text-lg font-bold">{title}</h2>
-    <p class="text-sm text-gray-500">{subtitle}</p>
+  <section class="info flex flex-col p-4 gap-2">
+    <h2 class="text-2xl font-bold">{title}</h2>
+    <div class="text-sm text-gray-500 space-y-1">
+      {subtitle.map((line) => (
+        <p>{line}</p>
+      ))}
+    </div>
     <p class="text-gray-700 mt-2">{description}</p>
-  </div>
+  </section>
 
   <!-- Underviser -->
-  <div class="instructor flex items-center gap-4 p-4 bg-gray-100">
+  <section class="instructor flex items-center gap-2 p-4 bg-gray-100">
+    <div class="flex items-left gap-4">
     <img
-      src={instructorImage}
-      alt="Instructor image"
-      class="w-12 h-12 rounded-full object-cover"
-    />
-    <p class="text-gray-800">{instructorName}</p>
-  </div>
+    src={instructorImage}
+    alt="Instructor image"
+    class="w-8 h-8 rounded-full object-center"
+  />
+  <p class="text-gray-800 font-semibold">{instructorName}</p>
+</div>
+<p class="text-gray-600 text-sm mt-2">{instructorDescription}</p>
+  </section>
 </div>

@@ -9,49 +9,56 @@ import Card from "../components/Card.astro";
 ---
 <MainLayout title="Titel">
 	<article>
-	<header class="bg-blue-500 mb-s p-sm">
-		<Header></Header>
-	</header>
+		<header class="bg-blue-500 mb-s p-sm">
+			<Header></Header>
+		</header>
 
-	<h2 class="text-large font-semibold mt-lg">Typografi</h2>
-	<h3 class="text-small font-semibold mt-sm">Størrelse</h3>
+		<h2 class="text-large font-semibold mt-lg">Typografi</h2>
+		<h3 class="text-small font-semibold mt-sm">Størrelse</h3>
 
-	<div>
-	<p class="w-lg h-lg bg-blue-500 text-neutrals-50">500</p>
-	<p class="w-lg h-lg bg-blue-600 text-neutrals-50">600</p>
-	<p class="w-lg h-lg bg-blue-700 text-neutrals-50">700</p>
-	<p class="w-lg h-lg bg-blue-800 text-neutrals-50">800</p>
-	<p class="w-lg h-lg bg-blue-900 text-white">900</p>
-	</div>
+		<div>
+		<p class="w-lg h-lg bg-blue-500 text-neutrals-50">500</p>
+		<p class="w-lg h-lg bg-blue-600 text-neutrals-50">600</p>
+		<p class="w-lg h-lg bg-blue-700 text-neutrals-50">700</p>
+		<p class="w-lg h-lg bg-blue-800 text-neutrals-50">800</p>
+		<p class="w-lg h-lg bg-blue-900 text-white">900</p>
+		</div>
 
-	<div>
-	<p class="w-4xl h-4xl border border-blue-500 rounded-sm">Small</p>
-	<p class="w-4xl h-4xl border-2 border-blue-500 rounded">Default</p>
-	<p class="w-4xl h-4xl border-3 border-blue-500 rounded-md">Medium</p>
-	<p class="w-4xl h-4xl border-4 border-blue-500 rounded-lg">Large</p>
-	<p class="w-4xl h-4xl border-5 border-blue-500 rounded-full">Full</p>
-	</div>
+		<div>
+		<p class="w-4xl h-4xl border border-blue-500 rounded-sm">Small</p>
+		<p class="w-4xl h-4xl border-2 border-blue-500 rounded">Default</p>
+		<p class="w-4xl h-4xl border-3 border-blue-500 rounded-md">Medium</p>
+		<p class="w-4xl h-4xl border-4 border-blue-500 rounded-lg">Large</p>
+		<p class="w-4xl h-4xl border-5 border-blue-500 rounded-full">Full</p>
+		</div>
 
-	<div>
-		<p class="w-lg h-lg border-0 border-blue-500">0</p>
-		<p class="w-lg h-lg border border-blue-500">default</p>
-		<p class="w-lg h-lg border-2 border-blue-500">2</p>
-		<p class="w-lg h-lg border-3 border-blue-500">3</p>
-		<p class="w-lg h-lg border-4 border-blue-500">4</p>
-	</div>
+		<div>
+			<p class="w-lg h-lg border-0 border-blue-500">0</p>
+			<p class="w-lg h-lg border border-blue-500">default</p>
+			<p class="w-lg h-lg border-2 border-blue-500">2</p>
+			<p class="w-lg h-lg border-3 border-blue-500">3</p>
+			<p class="w-lg h-lg border-4 border-blue-500">4</p>
+		</div>
 
-	<section>
-		<h2 class="text-large"></h2>
-		<section class="grid">
-			<Card></Card>
-			<Card></Card>
-			<Card></Card>
-			<Card></Card>
-			<Card></Card>
-			<Card></Card>
-		</section>
-	</section>
-
-	
+		<section class="p-6">
+			<h2 class="text-3xl font-semibold mb-6">Kommende Hold</h2>
+			<section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+			  <Card 
+				headerImage="/images/ballroom.jpg" 
+				title="Ballroom for begyndere"
+				subtitle={[
+				  "Tid: Fredag 20-22",
+				  "Alder: 25+",
+				  "Niveau: Begynder",
+				  "Deltagere: 20",
+				  "Lokale: Koncertsalen"
+				]}
+				description="Ballroom er en meget romantisk dans. Så find din partner, og meld jer som begynder, og mærk suset i den romantiske dans."
+				instructorName="Underviser: Karna Hage"
+				instructorImage="/images/karnahage.jpg"
+				instructorDescription="Karna er uddannet Ballroom instruktør fra Danseskolen. Hun har erfaring som danseinstruktør."
+			  />
+			</section>
+		  </section>
 	</article>
 </MainLayout>
