@@ -1,4 +1,5 @@
 ---
+import '../styles/tailwind.css'; 
 export interface CardProps {
   headerImage: string;
   title: string;
@@ -19,10 +20,32 @@ const {
   instructorDescription,
 } = Astro.props as CardProps;
 ---
+
+
+
 <div class="card flex flex-col border-2 border-gray-300 overflow-hidden shadow-drop25 max-w-sm mx-auto">
     <!-- Header med billede -->
-    <section class="header">
+    <section class="header relative">
+      <!-- Billede -->
       <img src={headerImage} alt="Header image" class="w-full h-32 object-cover" />
+  
+      <!-- Badges -->
+      <section class="badges relative inset-0 flex flex-col gap-8">
+        <!-- Badge 1 - Øverst venstre hjørne -->
+        <div class="badge absolute top-4 left-4 bg-blue-500 text-white px-4 py-2 rounded-full z-10">
+          Nyt hold!
+        </div>
+  
+        <!-- Badge 2 - Øverst højre hjørne, med afstand til Badge 1 -->
+        <div class="badge absolute top-4 right-4 bg-coral-500 text-white px-4 py-2 rounded-full z-10">
+          10% rabat!
+        </div>
+  
+        <!-- Badge 3 - Nederst højre hjørne, med afstand til Badge 2 -->
+        <div class="badge absolute bottom-4 right-4 bg-green-500 text-white px-4 py-2 rounded-full z-10">
+          Kun få pladser tilbage!
+        </div>
+      </section>
     </section>
   
     <!-- Holdinfo -->
