@@ -19,15 +19,15 @@ const {
   instructorDescription,
 } = Astro.props as CardProps;
 ---
-<div class="items-center md:ml-8xl card flex flex-col border-2 border-blue-500 overflow-hidden shadow-drop25 @container">
+<div class="card flex flex-col border-2 border-gray-300 overflow-hidden shadow-drop25 max-w-sm mx-auto">
     <!-- Header med billede -->
     <section class="header">
-      <img src={headerImage} alt="Header image" class="w-full h-64 object-cover" />
+      <img src={headerImage} alt="Header image" class="w-full h-32 object-cover" />
     </section>
   
     <!-- Holdinfo -->
-    <section class="info flex flex-col p-4 gap-2 border-b-2 border-blue-500">
-      <h2 class="text-2xl font-bold">{title}</h2>
+    <section class="info flex flex-col p-4 gap-2 border-b-2 border-gray-300">
+      <h2 class="text-3xl font-bold">{title}</h2>
       <div class="text-sm text-gray-500 space-y-1">
         {subtitle.map((line) => (
           <p>{line}</p>
@@ -42,7 +42,7 @@ const {
         <img
           src={instructorImage}
           alt="Instructor image"
-          class="w-8 h-8 object-center"
+          class="w-6 h-6 object-center"
         />
         <p class="text-gray-800 font-semibold">{instructorName}</p>
       </div>
