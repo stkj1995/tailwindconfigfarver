@@ -87,10 +87,10 @@ export default {
          },
 
         /* Tilføj dit typografiske hierarki herunder */
-        // fontSize: {
-        //     base: ['1rem', { lineHeight: '1.5rem' }],
-        //     large: ['2.5rem', { lineHeight: '3.75rem' }],
-        //   },
+         fontSize: {
+             base: ['1rem', { lineHeight: '1.5rem' }],
+             large: ['2.5rem', { lineHeight: '3.75rem' }],
+           },
 
         /* Tilføj dit fontvægt-hierarki nedenfor */
         //   fontWeight: {
