@@ -1,0 +1,43 @@
+---
+// Props til at gøre komponenten fleksibel
+export interface CardProps {
+  headerImage: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  instructorName: string;
+  instructorImage: string;
+}
+
+const {
+  headerImage,
+  title,
+  subtitle,
+  description,
+  instructorName,
+  instructorImage,
+} = Astro.props as CardProps;
+---
+<div class="card flex flex-col border rounded-lg overflow-hidden shadow-md @container">
+  <!-- Header med billede -->
+  <div class="header">
+    <img src={headerImage} alt="Header image" class="w-full h-40 object-cover" />
+  </div>
+
+  <!-- Holdinfo -->
+  <div class="info flex flex-col p-4">
+    <h2 class="text-lg font-bold">{title}</h2>
+    <p class="text-sm text-gray-500">{subtitle}</p>
+    <p class="text-gray-700 mt-2">{description}</p>
+  </div>
+
+  <!-- Underviser -->
+  <div class="instructor flex items-center gap-4 p-4 bg-gray-100">
+    <img
+      src={instructorImage}
+      alt="Instructor image"
+      class="w-12 h-12 rounded-full object-cover"
+    />
+    <p class="text-gray-800">{instructorName}</p>
+  </div>
+</div>

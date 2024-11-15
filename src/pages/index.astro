@@ -5,7 +5,7 @@ import Link from '../components/Link.astro';
 import Header from "../components/Header.astro";
 import { Image } from 'astro:assets';
 import thumbsup from "../assets/images/thumbsup.png";
-
+import Card from "../components/Card.astro";
 ---
 <MainLayout title="Titel">
 	<article>
@@ -40,7 +40,17 @@ import thumbsup from "../assets/images/thumbsup.png";
 		<p class="w-lg h-lg border-4 border-blue-500">4</p>
 	</div>
 
-
+	<section>
+		<h2 class="text-large"></h2>
+		<section class="grid">
+			<Card></Card>
+			<Card></Card>
+			<Card></Card>
+			<Card></Card>
+			<Card></Card>
+			<Card></Card>
+		</section>
+	</section>
 
 	
 	</article>
