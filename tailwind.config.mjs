@@ -28,7 +28,7 @@ export default {
                 200: '#C5D8E8',
                 300: '#A7C4DC',
                 400: '#8AB1D1',
-                500: '#11202C',
+                500: '#6D9DC5',
                 600: '#4680AF',
                 700: '#346083',
                 800: '#234058',
@@ -61,15 +61,30 @@ export default {
          },
 
          /* Tilføj din egen spacing nedenfor */
-        // spacing: {
-        //     'm': '40px',
-        // },
+        spacing: {
+            'xxs': '8px',
+            'xs': '16px',
+            's': '24px',
+            'sm': '32px',
+            'm': '40px',
+            'ml': '48px',
+            'lg': '64px',
+            'xl': '80px',
+            '2xl': '96px',
+            '3xl': '112px',
+            '4xl':'128px',
+            '5xl':'112px',
+            '6xl':'128px',
+            '7xl': '112px',
+            '8xl': '128px',
+            '9xl': '424px',
+         },
 
         /* Tilføj fonte herunder - husk også at tilføje webfonte i head-sektionen i MainLayout  */
-        // fontFamily: {
-        //     sans: ['Prompt', 'sans-serif'],
-        //     'display': ['Courier', 'monospace'], /* eksempel på ekstra font */
-        // },
+         fontFamily: {
+             sans: ['Prompt', 'sans-serif'],
+             'display': ['Courier', 'monospace'], /* eksempel på ekstra font */
+         },
 
         /* Tilføj dit typografiske hierarki herunder */
         // fontSize: {

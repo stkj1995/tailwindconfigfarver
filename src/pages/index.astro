@@ -2,14 +2,45 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from '../components/Button.astro';
 import Link from '../components/Link.astro';
+import Header from "../components/Header.astro";
 import { Image } from 'astro:assets';
 import thumbsup from "../assets/images/thumbsup.png";
 ---
 <MainLayout title="Titel">
 	<article>
-		<h1>Index overskrift</h1>
-		<Button>Klik!</Button>
-		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-		<Image src={thumbsup} alt=""></Image>
+	<header class="bg-blue-500 mb-s p-sm">
+		<Header></Header>
+	</header>
+
+	<h2 class="text-large font-semibold mt-lg">Typografi</h2>
+	<h3 class="text-small font-semibold mt-sm">Størrelse</h3>
+
+	<div>
+	<p class="w-lg h-lg bg-blue-500 text-neutrals-50">500</p>
+	<p class="w-lg h-lg bg-blue-600 text-neutrals-50">600</p>
+	<p class="w-lg h-lg bg-blue-700 text-neutrals-50">700</p>
+	<p class="w-lg h-lg bg-blue-800 text-neutrals-50">800</p>
+	<p class="w-lg h-lg bg-blue-900 text-white">900</p>
+	</div>
+
+	<div>
+	<p class="w-4xl h-4xl border border-blue-500 rounded-sm">Small</p>
+	<p class="w-4xl h-4xl border-2 border-blue-500 rounded">Default</p>
+	<p class="w-4xl h-4xl border-3 border-blue-500 rounded-md">Medium</p>
+	<p class="w-4xl h-4xl border-4 border-blue-500 rounded-lg">Large</p>
+	<p class="w-4xl h-4xl border-5 border-blue-500 rounded-full">Full</p>
+	</div>
+
+	<div>
+		<p class="w-lg h-lg border-0 border-blue-500">0</p>
+		<p class="w-lg h-lg border border-blue-500">default</p>
+		<p class="w-lg h-lg border-2 border-blue-500">2</p>
+		<p class="w-lg h-lg border-3 border-blue-500">3</p>
+		<p class="w-lg h-lg border-4 border-blue-500">4</p>
+	</div>
+
+
+
+	
 	</article>
 </MainLayout>
